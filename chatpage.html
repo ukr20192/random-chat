@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script src="chatbox03.js" type="text/javascript"></script>
+<script src="ajax03.js" type="text/javascript"></script>
+
+</head>
+
+<body onload="signIn()" onbeforeunload="signOut()" >
+<div id="displayArea" style="position:relative; top:20px; left:20px; width:1000px; font-size:30px">
+<p id = "text"> connecting..... </p>
+</div>
+<div id="box" style="position:inherit; top:auto; left:20px; padding:30px; visibility:hidden" >
+<form  id="messageForm" onsubmit="sendMessage();return false" style="padding:10px">
+	<input id="field" on type="text" style="width:600px; height:40px; font-size:25px">
+    <input id="send" onclick = "sendMessage();return false" type="button" value="Send" style="alignment-baseline:central; width:150px; height:30px; inline-box-align:last">
+</form>
+
+<form id="outForm" style="padding:10px" >
+<input onclick="signOut()" type="button" value="Sign Out" style="alignment-baseline:central; width:150px; height:30px " >
+</form>
+
+</div>
+
+<p id="status"> status </p>
+</body>
+</html>
